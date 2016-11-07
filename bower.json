@@ -1,0 +1,30 @@
+{
+  "name": "aerorand",
+  "authors": [
+    "Trent Rand <contact@TrentRand.com>"
+  ],
+  "description": "Website files for AeroRand.com",
+  "main": "dist/index.html",
+  "keywords": [
+    "AeroRand"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-bootstrap": "^2.1.4",
+    "angular-sanitize": "^1.5.8",
+    "angular-ui-router": "^0.2.1",
+    "bootstrap-sass": "^3.3.7",
+    "cryptojslib": "^3.1.2",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

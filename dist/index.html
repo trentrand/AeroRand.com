@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- re: ng-strict-di - If this attribute is present on the app element, the injector will be created in "strict-di" mode. This means that the application will fail to invoke functions which do not use explicit function annotation (and are thus unsuitable for minification), as described in the Dependency Injection guide, and useful debugging info will assist in tracking down the root of these bugs. https://docs.angularjs.org/api/ng/directive/ngApp -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <!-- re: <base> - If you would like to remove the hashbang that precedes the fragment identifier, configure your base href.
+  <base href="/"> -->
+  <!-- re: page-title - We will use this to update the page title with js from within our single page applications -->
+  <title page-title></title>
+  <meta name="description" content="">
+  <!-- <meta name="fragment" content="!"> -->
+
+  <!-- Apple META -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Facebook META -->
+  <meta property="fb:app_id" content="">
+  <meta property="og:site_name" content="AeroRand">
+  <meta property="og:title" content="AeroRand">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter META -->
+  <meta name="twitter:title" content="AeroRand">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Fav Icon -->
+  <link href="" rel="shortcut icon" type="image/x-icon">
+
+  <!-- Application CSS Files -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"><link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="ng-cloak">
+  <section class="container">
+     <section data-ui-view>Loading...</section>
+  </section>
+
+  <!-- re: noscript - this application requires javascript, so we better notify our users. -->
+  <noscript>
+    <style>
+      [ng\:cloak], [ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: block !important;
+      }
+    </style>
+    <div class="alert alert-warning">
+      <strong>This page requires JavaScript.</strong> Please enable it in your browser.
+    </div>
+  </noscript>
+
+  <!--Application JavaScript Files-->
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script><script type="text/javascript" src="bower_components/cryptojslib/rollups/hmac-sha256.js"></script><script type="text/javascript" src="bower_components/cryptojslib/components/enc-base64-min.js"></script><script type="text/javascript" src="bower_components/angular/angular.js"></script><script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script><script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script><script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script><script type="text/javascript" src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script><script type="text/javascript" src="js/app.js"></script>
+
+  
+</body>
+
+</html>

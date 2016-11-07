@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- re: ng-strict-di - If this attribute is present on the app element, the injector will be created in "strict-di" mode. This means that the application will fail to invoke functions which do not use explicit function annotation (and are thus unsuitable for minification), as described in the Dependency Injection guide, and useful debugging info will assist in tracking down the root of these bugs. https://docs.angularjs.org/api/ng/directive/ngApp -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <!-- re: <base> - If you would like to remove the hashbang that precedes the fragment identifier, configure your base href.
+  <base href="/"> -->
+  <!-- re: page-title - We will use this to update the page title with js from within our single page applications -->
+  <title page-title></title>
+  <meta name="description" content="{{app.description}}">
+  <!-- <meta name="fragment" content="!"> -->
+
+  <!-- Apple META -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Facebook META -->
+  <meta property="fb:app_id" content="{{app.facebookAppId}}">
+  <meta property="og:site_name" content="{{app.title}}">
+  <meta property="og:title" content="{{app.title}}">
+  <meta property="og:description" content="{{app.description}}">
+  <meta property="og:url" content="{{app.url}}">
+  <meta property="og:image" content="{{app.logo}}">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter META -->
+  <meta name="twitter:title" content="{{app.title}}">
+  <meta name="twitter:description" content="{{app.description}}">
+  <meta name="twitter:url" content="{{app.url}}">
+  <meta name="twitter:image" content="{{app.logo}}">
+
+  <!-- Fav Icon -->
+  <link href="{{app.favicon}}" rel="shortcut icon" type="image/x-icon">
+
+  <!-- Application CSS Files -->
+  {% for stylesheet in assets.stylesheets %}<link rel="stylesheet" href="{{stylesheet}}">{% endfor %}
+</head>
+
+<body class="ng-cloak">
+  <section class="container">
+     <section data-ui-view>Loading...</section>
+  </section>
+
+  <!-- re: noscript - this application requires javascript, so we better notify our users. -->
+  <noscript>
+    <style>
+      [ng\:cloak], [ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: block !important;
+      }
+    </style>
+    <div class="alert alert-warning">
+      <strong>This page requires JavaScript.</strong> Please enable it in your browser.
+    </div>
+  </noscript>
+
+  <!--Application JavaScript Files-->
+  {% for script in assets.scripts %}<script type="text/javascript" src="{{script}}"></script>{% endfor %}
+
+  {% if livereload %}
+  <!--Livereload script rendered -->
+  <script type="text/javascript" src="{{host}}:35729/livereload.js"></script>
+  {% endif %}
+</body>
+
+</html>
