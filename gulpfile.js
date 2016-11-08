@@ -4,9 +4,9 @@ var gulp = require('gulp'),
 	swig = require('gulp-swig'),
 	clean = require('gulp-clean'),
 	concat = require('gulp-concat-util'),
-    sass = require('gulp-sass'),
-    embedTemplates = require('gulp-angular-embed-templates'),
-    webserver = require('gulp-webserver'),
+  sass = require('gulp-sass'),
+  embedTemplates = require('gulp-angular-embed-templates'),
+  webserver = require('gulp-webserver'),
 	_ = require('lodash'),
 	config = require('./config/all'),
 	production = require('./config/production'),
@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 if (args.env === 'production') {
 	_.assign(config,production)
 } else {
-	_.assign(config,development)	
+	_.assign(config,development)
 }
 
 gulp.task('clean', function () {
@@ -55,6 +55,11 @@ gulp.task('sass-dev', ['clean'], function () {
     .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('resources', ['clean'], function () {
+  gulp.src(config.resources)
+    .pipe(gulp.dest('./dist/resources/'));
+});
+
 gulp.task('webserver', function() {
   gulp.src('dist')
     .pipe(webserver({
@@ -70,7 +75,6 @@ gulp.task('watch', function () {
   gulp.watch(config.sass, ['build']);
 });
 
-gulp.task('build', ['clean', 'swig','copy-bower','concat-app','sass-dev']);
+gulp.task('build', ['clean', 'swig','copy-bower','concat-app','sass-dev','resources']);
 
 gulp.task('default', ['build', 'webserver', 'watch']);
-

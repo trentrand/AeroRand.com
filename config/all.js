@@ -8,5 +8,8 @@ module.exports = {
         logo: '',
         favicon: ''
     },
-    sass: 'app/scss/app.scss'
+    sass: 'app/scss/app.scss',
+    resources: [
+        'resources/**'
+    ]
 };
