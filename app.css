@@ -1,0 +1,82 @@
+html {
+  background: #f3f3f3; }
+
+body {
+  padding-top: 70px; }
+
+.navbar-brand img {
+  width: 40%; }
+
+nav.navbar {
+  height: 75px;
+  background: #f3f3f3;
+  border-bottom: 0px solid #000; }
+  nav.navbar li {
+    display: block;
+    height: 75px;
+    margin: auto 0px;
+    float: left;
+    text-align: center;
+    line-height: 75px; }
+  nav.navbar a {
+    line-height: 75px;
+    padding: auto 0px;
+    text-align: center;
+    color: black !important; }
+  nav.navbar .navbar-right {
+    padding-right: 25px; }
+    nav.navbar .navbar-right a {
+      line-height: 50px;
+      padding: auto 0px;
+      text-align: center;
+      color: black !important; }
+    nav.navbar .navbar-right li a.active {
+      background-color: #000000 tranparent;
+      font-weight: 600; }
+
+section.banner {
+  background-image: url(../resources/banner.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid #666666;
+  margin-top: 5px;
+  height: 400px; }
+
+section.container {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%; }
+
+.requestquote {
+  background-color: lightgrey;
+  color: black;
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  height: 50px;
+  margin-left: -100px;
+  bottom: -25px;
+  padding-top: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 700; }
+  .requestquote:hover {
+    background-color: #404040;
+    color: white;
+    text-decoration: none; }
+
+section.footer {
+  color: white;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  padding: 5px 0;
+  vertical-align: middle;
+  background-color: black; }
+
+/*# sourceMappingURL=app.css.map */
