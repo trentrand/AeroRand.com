@@ -12,6 +12,10 @@ Run the gulp command run the applications build process, start a webserver, laun
 
     gulp
 
+To watch changes and show live compilation errors for SASS, run the following command:
+
+    sass --watch app/scss/app.scss:app.css
+
 # Support
 
 Contact support@TrentRand.com
