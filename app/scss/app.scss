@@ -25,22 +25,64 @@ $brand-danger: #E53935;
 $brand-warning: #FFB300;
 $brand-info: #387EF5;
 
-html {
+$table-left-offset: 22px;
+
+html, section {
   background: #f3f3f3;
 }
 
 body {
-  padding-top: 70px;
+    background: #f3f3f3 !important;
+    padding-top: 70px;
+    padding-bottom: 30px;
 }
 
-.navbar-brand {
+hr {
+    @media(max-width:768px){
+        margin : {
+            top: 25px !important;
+            bottom: 10px !important;
+        }
+    }
+    margin : {
+        top: 75px !important;
+        bottom: 10px !important;
+    }
+    border-top: 0px solid #eee !important;
+}
+
+a.navbar-brand {
+  height: 75px;
   img {
-    width: 40%;
+    height: 90%;
   }
 }
 
+i.fa-times-circle {
+    color: red;
+}
+
+hr.nofloatingbutton {
+    margin-top: 55px !important;
+}
+
+div.navbar-header {
+    @media(max-width:583px) {
+        a.navbar-brand {
+            padding-left: 20px;
+            padding-right: 0px;
+        }
+    }
+    button {
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+    height: 75px;
+}
+
 nav.navbar {
-  height: 75px;
+  min-height: 75px;
   background: #f3f3f3;
   li {
     display: block;
@@ -79,12 +121,12 @@ nav.navbar {
 
 section.banner {
   background : {
-    image: url(../resources/banner.jpeg);
     size: cover;
     position: center;
   }
   border : {
     top: 1px solid #666666;
+    bottom: 1px solid #666666;
   }
   margin-top: 5px;
   height: 400px;
@@ -102,15 +144,125 @@ section.container {
   width: 100%;
 }
 
+section.fillpage {
+    position: absolute;
+    top: 500px;
+    bottom: 0px;
+    width: 100%;
+    background-color: transparent;
+    @media(min-width:768px){
+        top: 450px;
+    }
+}
+
+div.col-sm-12 embed {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 2100px;
+    text-align: center;
+}
+
+div.panel.panel-default {
+    max-width: none !important;
+    margin-bottom: 25px;
+}
+
+table {
+    tr {
+        th {
+            &:first-child {
+                padding-left: $table-left-offset !important;
+            }
+        }
+        td {
+            &:first-child {
+                padding-left: $table-left-offset !important;
+            }
+        }
+    }
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+div {
+    h2 {
+        margin-top: 15px;
+
+    }
+}
+
+h2 {
+    @media(min-width:1200px){
+        margin-bottom: 25px !important;
+    }
+}
+
+div.bottom {
+    padding-bottom: 85px;
+    @media(max-width:768px){
+        padding-bottom: 0px;
+    }
+}
+
+div.col-sm-4.bottomright {
+    @media(max-width:768px){
+        padding-bottom: 45px;
+    }
+}
+
+.embed-container {
+   height: 1500px;
+   padding-bottom: 3%; /* play with this until right */
+   @media(max-width:1200px){
+       height: 1250px;
+       padding-bottom: 7%; /* play with this until right */
+   }
+   @media(max-width:768px){
+       height: 650px;
+       padding-bottom: 12%; /* play with this until right */
+   }
+   width: 100%;
+   pointer-events: none;
+   overflow: hidden;
+   position: relative;
+}
+
+h2.hidemobile {
+    @media(max-width:768px){
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+blockquote.pagebottom {
+    margin-bottom: 5%;
+}
+
+.embed-container iframe {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
 .requestquote {
   background-color: lightgrey;
   color: black;
   position: absolute;
+  top: 0px;
+  @media(max-width:768px){
+      top: -50px;
+  }
   left: 50%;
   width: 200px;
   height: 50px;
   margin-left: -100px;
-  bottom: -25px;
   padding-top: 15px;
   display: inline-block;
   vertical-align: middle;
@@ -123,14 +275,53 @@ section.container {
   }
 }
 
-section.footer {
-  color: white;
-  font-size: 10px;
+h1.pagetitle {
+  color: black;
   width: 100%;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  padding: 5px 0;
+  vertical-align: middle;
+  margin-top: 65px;
+}
+
+contactinfo {
+  color: black;
+  width: 100%;
+  text-align: center;
+  display: block;
+  // vertical-align: middle;
+}
+
+nav.footer {
+  color: white;
+  font-size: 10px;
+  height: 5px !important;
+  min-height: 30px;
+  text-align: center;
+  padding: 7px 0;
   vertical-align: middle;
   background-color: black;
+}
+
+.hidden {
+    display: none;
+}
+.vertical-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.panel.panel-default {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+.message {
+    padding: 15px;
+    margin: 0;
+}
+
+form.form-horizontal {
+    padding-bottom: 40px !important;
+    @media(max-width:768px){
+        padding-bottom:0px !important
+    }
 }

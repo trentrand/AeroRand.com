@@ -10,7 +10,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
             });
         });
 
-        $urlRouterProvider.when('','/alpha')
+        $urlRouterProvider.when('','/home')
 
         $stateProvider.
             state('index', {
@@ -19,14 +19,59 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 controller: 'IndexController',
                 controllerAs: 'vm'
             })
-            .state('index.alpha', {
-                url: '/alpha?age&search&letter&page',
-                templateUrl: '../views/alpha.view.html',
-                controller: 'AlphaController',
+            .state('index.home', {
+                url: '/home',
+                templateUrl: '../views/home.view.html',
+                controller: 'HomeController',
                 controllerAs: 'vm',
                 data: {
-                    pageTitle: 'Alpha'
+                    pageTitle: 'Home'
                 }
+            })
+            .state('index.products', {
+              url: '/products',
+              templateUrl: '../views/products.view.html',
+              controller: 'ProductsController',
+              controllerAs: 'vm',
+              data: {
+                pageTitle: 'Products'
+              }
+            })
+            .state('index.linecard', {
+              url: '/linecard',
+              templateUrl: '../views/linecard.view.html',
+              controller: 'LinecardController',
+              controllerAs: 'vm',
+              data: {
+                pageTitle: 'Line Card'
+              }
+            })
+            .state('index.quote', {
+              url: '/quote',
+              templateUrl: '../views/quote.view.html',
+              controller: 'QuoteController',
+              controllerAs: 'vm',
+              data: {
+                pageTitle: 'Quote'
+              }
+            })
+            .state('index.inventory', {
+              url: '/inventory',
+              templateUrl: '../views/inventory.view.html',
+              controller: 'InventoryController',
+              controllerAs: 'vm',
+              data: {
+                pageTitle: 'Inventory'
+              }
+            })
+            .state('index.contact', {
+              url: '/contact',
+              templateUrl: '../views/contact.view.html',
+              controller: 'ContactController',
+              controllerAs: 'vm',
+              data: {
+                pageTitle: 'Contact'
+              }
             })
             .state('not-found', {
                 url: '/not-found',

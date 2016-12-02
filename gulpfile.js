@@ -4,15 +4,14 @@ var gulp = require('gulp'),
 	swig = require('gulp-swig'),
 	clean = require('gulp-clean'),
 	concat = require('gulp-concat-util'),
-  sass = require('gulp-sass'),
-  embedTemplates = require('gulp-angular-embed-templates'),
-  webserver = require('gulp-webserver'),
+  	sass = require('gulp-sass'),
+  	embedTemplates = require('gulp-angular-embed-templates'),
+  	webserver = require('gulp-webserver'),
 	_ = require('lodash'),
 	config = require('./config/all'),
 	production = require('./config/production'),
 	development = require('./config/development'),
 	args = require('yargs').argv;
-
 
 if (args.env === 'production') {
 	_.assign(config,production)
@@ -22,7 +21,7 @@ if (args.env === 'production') {
 
 gulp.task('clean', function () {
     return gulp.src('./dist', {read: false})
-        .pipe(clean());
+        .pipe(clean())
 });
 
 gulp.task('swig', ['clean'], function() {
