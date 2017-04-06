@@ -3,6 +3,7 @@
 angular.module('core').controller('IndexController', ['$state', '$scope', '$rootScope',
 	function($state, $scope, $rootScope) {
 		var vm = this;
+		$scope.isNavCollapsed = true;
 		$scope.$state = $state;
 	}
 ]).directive('backImg', function(){

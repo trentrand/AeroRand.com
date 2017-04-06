@@ -27,6 +27,12 @@ $brand-info: #387EF5;
 
 $table-left-offset: 22px;
 
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+
+html, body {
+    font-family: "Open Sans", sans-serif !important;
+}
+
 html, section {
   background: #f3f3f3;
 }
@@ -36,6 +42,33 @@ body {
     padding-top: 70px;
     padding-bottom: 30px;
 }
+
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -20px;
+}
+.footer, .push {
+height: 20px;
+}
+
+// nav.footer {
+//   color: white;
+//   font-size: 10px;
+//   height: 30px !important;
+//   min-height: 30px;
+//   text-align: center;
+//   padding: 7px 0;
+//   vertical-align: middle;
+//   background-color: black;
+// }
 
 hr {
     @media(max-width:768px){
@@ -51,6 +84,11 @@ hr {
     border-top: 0px solid #eee !important;
 }
 
+.navbar-brand {
+    padding-left: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 0px !important;
+}
 a.navbar-brand {
   height: 75px;
   img {
@@ -84,36 +122,39 @@ div.navbar-header {
 nav.navbar {
   min-height: 75px;
   background: #f3f3f3;
-  li {
-    display: block;
-    height: 75px;
-    margin: auto 0px;
-    float: left;
-    text-align: center;
-    line-height: 75px;
-  }
-  a {
-    line-height: 75px;
-    // margin-top: 15px;
-    padding: auto 0px;
-    text-align: center;
-    color: black !important;
-  }
-  .navbar-right {
-    padding-right: 25px;
-    a {
-    line-height: 50px;
-    padding: auto 0px;
-    text-align: center;
-    color: black !important;
-    }
-    li {
-      a.active {
-        background-color: #000000 tranparent;
-        font-weight:600;
+  @media (min-width: 496px) {
+      li {
+        display: block;
+        height: 75px;
+        margin: auto 0px;
+        float: left;
+        text-align: center;
+        line-height: 75px;
       }
-    }
+      a {
+        line-height: 75px;
+        // margin-top: 15px;
+        padding: auto 0px;
+        text-align: center;
+        color: black !important;
+      }
+      .navbar-right {
+        padding-right: 25px;
+        a {
+        line-height: 50px;
+        padding: auto 0px;
+        text-align: center;
+        color: black !important;
+        }
+        li {
+          a.active {
+            background-color: #000000 tranparent;
+            font-weight:600;
+          }
+        }
+      }
   }
+
   border : {
     bottom: 0px solid #000;
   }
@@ -142,17 +183,6 @@ section.container {
     right: 0px;
   }
   width: 100%;
-}
-
-section.fillpage {
-    position: absolute;
-    top: 500px;
-    bottom: 0px;
-    width: 100%;
-    background-color: transparent;
-    @media(min-width:768px){
-        top: 450px;
-    }
 }
 
 div.col-sm-12 embed {
@@ -289,17 +319,6 @@ contactinfo {
   text-align: center;
   display: block;
   // vertical-align: middle;
-}
-
-nav.footer {
-  color: white;
-  font-size: 10px;
-  height: 5px !important;
-  min-height: 30px;
-  text-align: center;
-  padding: 7px 0;
-  vertical-align: middle;
-  background-color: black;
 }
 
 .hidden {

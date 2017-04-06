@@ -12,6 +12,10 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 
 //Then define the init function for starting up the application
 angular.element(document).ready(function () {
+    var height = $('footer').height();
+    $('body').css({
+        "margin-bottom": height
+    });
   //Fixing facebook bug with redirect
   if (window.location.hash && window.location.hash === '#_=_') {
     if (window.history && history.pushState) {
@@ -37,7 +41,7 @@ angular.element(document).ready(function () {
 //   // Check authentication before changing state
 //   /*$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
 //     if (toState.data && toState.data.roles && toState.data.roles.length > 0) {
-      
+
 //     }
 //   });*/
 
