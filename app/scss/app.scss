@@ -1,30 +1,3 @@
-$ac-green-50: #E6F3E0;
-$ac-green-100: #C3E2B5;
-$ac-green-200: #9ED189;
-$ac-green-300: #76BE59;
-$ac-green-400: #59B036;
-$ac-green-500: #3DA313;
-$ac-green-600: #379411;
-$ac-green-700: #31840F;
-
-$ac-blue-50: #DEE6F0;
-$ac-blue-100: #B0C4DC;
-$ac-blue-200: #80A0C6;
-$ac-blue-300: #4C79AF;
-$ac-blue-400: #265C9E;
-$ac-blue-500: #01408D;
-$ac-blue-600: #003A80;
-$ac-blue-700: #003472;
-$ac-blue-800: #002D64;
-$ac-blue-900: #002149;
-
-$brand-primary: $ac-blue-400 !default;
-$brand-primary-hover: $ac-blue-50 !default;
-$brand-success: $ac-green-400 !default;
-$brand-danger: #E53935;
-$brand-warning: #FFB300;
-$brand-info: #387EF5;
-
 $table-left-offset: 22px;
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
@@ -55,20 +28,21 @@ height: auto !important;
 height: 100%;
 margin: 0 auto -20px;
 }
+
 .footer, .push {
 height: 20px;
 }
 
-// nav.footer {
-//   color: white;
-//   font-size: 10px;
-//   height: 30px !important;
-//   min-height: 30px;
-//   text-align: center;
-//   padding: 7px 0;
-//   vertical-align: middle;
-//   background-color: black;
-// }
+nav.footer {
+  color: white;
+  font-size: 10px;
+  height: 5px !important;
+  min-height: 30px;
+  text-align: center;
+  padding: 7px 0;
+  vertical-align: middle;
+  background: black;
+}
 
 hr {
     @media(max-width:768px){
@@ -119,7 +93,7 @@ div.navbar-header {
     height: 75px;
 }
 
-nav.navbar {
+nav.navbar#header {
   min-height: 75px;
   background: #f3f3f3;
   @media (min-width: 496px) {
