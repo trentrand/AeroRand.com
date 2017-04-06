@@ -26,7 +26,7 @@ gulp.task('clean', function () {
 
 gulp.task('swig', ['clean'], function() {
   gulp.src('./app/index.html')
-    .pipe(swig({data: config}))
+    .pipe(swig({data: config, defaults: { cache: false } }))
     .pipe(gulp.dest('./dist/'))
 });
 
@@ -69,8 +69,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['app/config.js', 'app/init.js', 'app/core.module.js', 'app/**/*.js', 'app/views/*.html'], ['build']);
-  gulp.watch(['./app/index.html'], ['build']);
+  gulp.watch(['app/index.html', 'app/config.js', 'app/init.js', 'app/core.module.js', 'app/**/*.js', 'app/views/*.html'], ['build']);
   gulp.watch(config.sass, ['build']);
 });
 
