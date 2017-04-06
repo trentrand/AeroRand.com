@@ -25,6 +25,7 @@
     "angular-ui-router": "^0.2.1",
     "bootstrap-sass": "^3.3.7",
     "cryptojslib": "^3.1.2",
-    "font-awesome": "fontawesome#^4.6.3"
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootswatch": "^3.3.7"
   }
 }
