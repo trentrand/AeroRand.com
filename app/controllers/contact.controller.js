@@ -2,6 +2,7 @@
 
 angular.module('core').controller('ContactController', ['$scope', '$rootScope', '$stateParams', '$http', '$window',
     function($scope, $rootScope, $stateParams, $http, $window) {
+        $rootScope.pagetitle = "Contact | AeroRand";
         $scope.result = 'hidden'
         $scope.resultMessage;
         $scope.formData; //formData is an object holding the name, email, subject, and message

@@ -2,6 +2,7 @@
 
 angular.module('core').controller('QuoteController', ['$scope', '$rootScope', '$stateParams', '$http', '$window',
     function($scope, $rootScope, $stateParams, $http, $window) {
+    $rootScope.pagetitle = "RFQ | AeroRand"
     var vm = this;
     $scope.parts = [
         {}

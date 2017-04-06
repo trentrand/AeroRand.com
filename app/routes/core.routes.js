@@ -78,7 +78,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: '../views/404.view.html',
                 data: {
                     ignoreState: true,
-                    pageTitle: 'Not-Found'
+                    pageTitle: 'Page Not Found'
                 }
             });
     }

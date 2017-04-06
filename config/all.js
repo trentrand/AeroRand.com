@@ -3,7 +3,7 @@
 module.exports = {
     app: {
         title: 'AeroRand',
-        description: '',
+        description: 'An Aerospace Hardware and Fastener Distributor | AeroRand',
         keywords: 'AeroRand',
         logo: '',
         favicon: ''
