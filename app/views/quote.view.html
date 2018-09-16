@@ -1,78 +1,73 @@
-<section class="col-md-12 banner" back-img="../resources/banner3-bw-min.jpg">
-  <!-- <a class="requestquote" ui-sref="index.quote" ng-hide="$state.includes('index.quote')">Request A Quote</a> -->
-</section>
+<div class="col-md-12 banner" back-img="../resources/banner3-bw-min.jpg">
+</div>
 
-<section>
-    <div class="container">
-        <a class="requestquote" ui-sref="index.quote" ng-hide="$state.includes('index.quote')" href="#!/quote">Request A Quote</a>
-        <hr class="nofloatingbutton">
-        <div class="col-md-12" style="padding-right: 30px;">
-            <h3 style="padding-bottom: 15px;">
-                Request for Quotation
-                <small>Submit a digital Request for Quotation online</small>
-            </h3>
-            <div style="padding-left: 3px;">
-                <p>Using the form below, please provide your contact information and parts for which you'd like to request a quotation. Once your information has been submitted, you will be contacted by one of our qualified sales representatives with an answer to
-                    your RFQ. In most cases you can expect a same day response to your submission.</p>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <a class="pull-right btn btn-xs" ng-click="vm.addPart();">
-                        <i class="fa fa-plus-circle"></i>
-                        Add Item
-                    </a>
-                    Parts Quote
-                </div>
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
-                            <div class="col-md-4" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
-                                <label for="inputName" class="control-label">Name</label>
-                                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-4" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
-                                <label for="inputEmail" class="control-label">Email</label>
-                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
-                            </div>
-                            <div class="col-md-4" style="padding-bottom: 25px;">
-                                <label for="inputCompany" class="control-label">Company Name</label>
-                                <input ng-model="formData.inputCompany" type="text" class="form-control" id="inputCompany" name="inputCompany" placeholder="Your Company Name">
-                            </div>
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr role="row">
-                                        <th>Part #</th>
-                                        <th>Quantity</th>
-                                        <th style="width: 25px;">&nbsp;</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="part in parts track by $index">
-                                        <td><input type="text" ng-model="part.partId" placeholder="Enter part number"></input></td>
-                                        <td><input type="text" ng-model="part.quantity" placeholder="Enter quantity"></input></td>
-                                        <td>
-                                            <a class="btn" ng-click="remove(part)">
-                                                <i class="fa fa-times-circle"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="form-group">
-                                <div class="col-lg-offset-2 col-lg-10">
-                                    <button type="submit" class="btn btn-primary pull-right" ng-disabled="submitButtonDisabled">
-                                        Submit Quote
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                        <p ng-class="result" style="margin-bottom: 55px; margin: 0;">{{ resultMessage }}</p>
-                    </div>
-                </div>
-            </div>
-            <blockquote style="margin-bottom: 50px;">
-                <p>Need faster service during business hours? Please <a ui-sref="index.contact">call</a> our sales department directly.</p>
-            </blockquote>
+<div class="container">
+    <div class="col-md-12">
+        <h3 style="padding-bottom: 15px;">
+            Request for Quotation
+            <small>Submit a digital Request for Quotation online</small>
+        </h3>
+        <div style="padding-left: 3px;">
+            <p>Using the form below, please provide your contact information and parts for which you'd like to request a quotation. Once your information has been submitted, you will be contacted by one of our qualified sales representatives with an answer to
+                your RFQ. In most cases you can expect a same day response to your submission.</p>
         </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a class="pull-right btn btn-xs" ng-click="vm.addPart();">
+                    <i class="fa fa-plus-circle"></i>
+                    Add Item
+                </a>
+                Parts Quote
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
+                        <div class="col-md-4" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                            <label for="inputName" class="control-label">Name</label>
+                            <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-4" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                            <label for="inputEmail" class="control-label">Email</label>
+                            <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+                        </div>
+                        <div class="col-md-4" style="padding-bottom: 25px;">
+                            <label for="inputCompany" class="control-label">Company Name</label>
+                            <input ng-model="formData.inputCompany" type="text" class="form-control" id="inputCompany" name="inputCompany" placeholder="Your Company Name">
+                        </div>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th>Part #</th>
+                                    <th>Quantity</th>
+                                    <th style="width: 25px;">&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="part in parts track by $index">
+                                    <td><input type="text" ng-model="part.partId" placeholder="Enter part number"></input></td>
+                                    <td><input type="text" ng-model="part.quantity" placeholder="Enter quantity"></input></td>
+                                    <td>
+                                        <a class="btn" ng-click="remove(part)">
+                                            <i class="fa fa-times-circle"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button type="submit" class="btn btn-primary pull-right" ng-disabled="submitButtonDisabled">
+                                    Submit Quote
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <p ng-class="result" style="margin-bottom: 55px; margin: 0;">{{ resultMessage }}</p>
+                </div>
+            </div>
+        </div>
+        <blockquote style="margin-bottom: 50px;">
+            <p>Need faster service during business hours? Please <a ui-sref="index.contact">call</a> our sales department directly.</p>
+        </blockquote>
     </div>
-</section>
+</div>
